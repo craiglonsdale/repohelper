@@ -1,5 +1,5 @@
-const githubAuthentication = require('./github-authentication');
-const pullRequests = require('./pull-requests');
+const githubAuthentication = require('./lib/githubAuthentication');
+const pullRequests = require('./lib/pullRequests');
 
 module.exports = {
   createGithubAuthentication: githubAuthentication,
