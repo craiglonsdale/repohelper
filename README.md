@@ -6,12 +6,14 @@ Node module to help with the handling of github repo information
 # Usage
 ```js
 const repoHelper = require('repoHelper');
-return repoHelper.createGithubAuthentication(options.tokenName, options.tokenFile, options.scope)
+return repoHelper.createGithubAuthentication('Demands', 'token', ['repo'])
   .then((credentials) => {
-    return repoHelper.getRepos(credentials, options.limit, options.debug)
+    const limit = 0;
+    const debug = false;
+    return repoHelper.getRepos(credentials, limit, debug)
       .then((repos) => {
         return Promise.all(repos.map((repo) => {
-          return repoHelper.getOpenPRs(credentials, repo, options.debug);
+          return repoHelper.getOpenPRs(credentials, repo, debug);
         }))
       });
   });
