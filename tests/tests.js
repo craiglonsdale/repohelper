@@ -1,4 +1,5 @@
 'use strict'; //eslint-disable-line
+
 const expect = require('chai').expect;
 
 describe('RepoHelper', () => {
